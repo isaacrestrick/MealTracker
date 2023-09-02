@@ -22,6 +22,7 @@ class MealListViewController: UIViewController, UINavigationControllerDelegate, 
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     var context: NSManagedObjectContext?
 
+    var api_spinner: UIActivityIndicatorView!
     
     var meals: [Meal] = []
     var mealEntities: [MealEntity] = []
@@ -44,6 +45,11 @@ class MealListViewController: UIViewController, UINavigationControllerDelegate, 
         super.viewDidLoad()
         context = appDelegate.persistentContainer.viewContext
         navigationItem.largeTitleDisplayMode = .always
+
+        api_spinner = UIActivityIndicatorView(style: .large)
+        api_spinner.transform = CGAffineTransform(scaleX: 2, y: 2)
+        api_spinner.center = view.center
+        view.addSubview(api_spinner)
 
         
         self.mealService = MealService(context:context!)
@@ -167,6 +173,7 @@ class MealListViewController: UIViewController, UINavigationControllerDelegate, 
 
         let submitAction = UIAlertAction(title: "Submit", style: .default) { [weak self] _ in
             if let mealDescription = alertController.textFields?.first?.text {
+                self?.api_spinner.startAnimating()
                 self?.openAIService.generateRecipe(description: mealDescription) { result in
                     switch result {
                         case .success(let response):
@@ -198,22 +205,27 @@ class MealListViewController: UIViewController, UINavigationControllerDelegate, 
                                                                 let meal = Meal(named: name, date: Date(), foodDescription: description, imageUrl: savedImageUrl, confirmedEaten: false)
                                                                 print("Created meal: \(meal)")
                                                                 self?.saveMeal(meal)
+                                                                self?.api_spinner.stopAnimating()
                                                             } else {
                                                                 print("Error saving image locally.")
+                                                                self?.api_spinner.stopAnimating()
                                                             }
                                                         }
                                                     } else {
                                                         print("Error downloading image.")
+                                                        self?.api_spinner.stopAnimating()
                                                     }
                                                 }
                                             }
                                         case .failure(let error):
                                             print("Error generating image: \(error)")
+                                            self?.api_spinner.stopAnimating()
                                     }
                                 }
 
                             }
                         case .failure(let error):
+                            self?.api_spinner.stopAnimating()
                             print("Error generating recipe: \(error)")
                     }
                 }
