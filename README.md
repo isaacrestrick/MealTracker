@@ -9,4 +9,4 @@ Here is a video of the application:
 https://www.youtube.com/watch?v=H-FNpvRcbR4
 
 Here are some images:
-<img src="https://github.com/isaacrestrick/TweetBoard/blob/main/images_for_readme/all_meals.png" width="100" height="400">
+![all_meals](https://github.com/isaacrestrick/TweetBoard/blob/main/images_for_readme/all_meals.png)
