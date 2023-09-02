@@ -11,3 +11,8 @@ https://www.youtube.com/watch?v=H-FNpvRcbR4
 Here are some images:
 <br></br>
 <img src="https://github.com/isaacrestrick/MealTracker/blob/main/images_for_readme/all_meals.png" width="300" height="650">
+<img src="https://github.com/isaacrestrick/MealTracker/blob/main/images_for_readme/some_eaten.png" width="300" height="650">
+<img src="https://github.com/isaacrestrick/MealTracker/blob/main/images_for_readme/add_ai_meal.png" width="300" height="650">
+<img src="https://github.com/isaacrestrick/MealTracker/blob/main/images_for_readme/add_manual_meal.png" width="300" height="650">
+<img src="https://github.com/isaacrestrick/MealTracker/blob/main/images_for_readme/amazing_sandwich.png" width="300" height="650">
+<img src="https://github.com/isaacrestrick/MealTracker/blob/main/images_for_readme/sort_meals.png" width="300" height="650">
