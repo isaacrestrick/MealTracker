@@ -9,4 +9,5 @@ Here is a video of the application:
 https://www.youtube.com/watch?v=H-FNpvRcbR4
 
 Here are some images:
+<br></br>
 <img src="https://github.com/isaacrestrick/MealTracker/blob/main/images_for_readme/all_meals.png" width="300" height="650">
