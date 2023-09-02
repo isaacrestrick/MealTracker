@@ -9,5 +9,4 @@ Here is a video of the application:
 https://www.youtube.com/watch?v=H-FNpvRcbR4
 
 Here are some images:
-![all_meals](https://github.com/isaacrestrick/MealTracker/blob/main/images_for_readme/all_meals.png)
-<img src="https://github.com/isaacrestrick/MealTracker/blob/main/images_for_readme/all_meals.png" width="100" height="300">
+<img src="https://github.com/isaacrestrick/MealTracker/blob/main/images_for_readme/all_meals.png" width="300" height="650">
